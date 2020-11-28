@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body>
+
+  <div class="container animate__animated animate__backInDown">
+
+
+    <div class="row">
+      <!-- COL1 -->
+      <div class="col1">
+        <img class="shadow-mobile" src="images/bg-pattern-mobile.svg" alt="Background shadow">
+        <img class="woman-mobile" src="images/illustration-woman-online-mobile.svg" alt="Background shadow">
+        <img class="box" src="images/illustration-box-desktop.svg" alt="box">
+      </div>
+
+      <!-- COL2 -->
+      <div class="col2">
+        <h1>FAQ</h1>
+
+        <!-- BLOCKS...................................................... -->
+        <div class="blocks">
+          <div class="block">
+            <div class="header">
+              <span class="h2">How many team members can I invite?</span>
+              <span><img class="arrow" src="images/icon-arrow-down.svg" alt="arrow"></span>
+            </div>
+
+            <p> You can invite up to 2 additional users on the Free plan. There is no limit on
+              team members for the Premium plan.</p>
+          </div>
+
+          <hr>
+
+          <div class="block">
+            <div class="header">
+              <span class="h2 bold">What is the maximum file upload size?</span>
+              <span><img class="arrow flip" src="images/icon-arrow-down.svg" alt="arrow"></span>
+            </div>
+            <p class="animate__animated animate__fadeInDown"> No more than 2GB. All files in your account must fit your allotted storage space.</p>
+          </div>
+
+          <hr>
+
+          <div class="block">
+            <div class="header">
+              <span class="h2">How do I reset my password?</span>
+              <span><img class="arrow" src="images/icon-arrow-down.svg" alt="arrow"></span>
+            </div>
+            <p>Click “Forgot password” from the login page or “Change password” from your profile page.
+              A reset link will be emailed to you.</p>
+          </div>
+
+          <hr>
+
+          <div class="block">
+            <div class="header">
+              <span class="h2">Can I cancel my subscription?</span>
+              <span><img class="arrow" src="images/icon-arrow-down.svg" alt="arrow"></span>
+            </div>
+            <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
+          </div>
+          <hr>
+          <div class="block">
+            <div class="header">
+              <span class="h2">Do you provide additional support?</span>
+              <span><img class="arrow" src="images/icon-arrow-down.svg" alt="arrow"></span>
+            </div>
+            <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+          </div>
+
+          <hr>
+
+        </div>
+        <!-- ................................................................ -->
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+  <script>
+    $("div p:not(:eq(1))").hide();
+    $(document).ready(function() {
+      $(".block div.header").on("click", function() {
+        $(this).parent().find('p').slideToggle().toggleClass("animate__animated animate__fadeInDown");
+        $(this).parent().find(".arrow").toggleClass("flip");
+        $(this).parent().find(".h2").toggleClass("bold");
+      });
+    });
+  </script>
+
+</body>
+
+</html>
