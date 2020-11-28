@@ -6,6 +6,11 @@ html {
   font-family: 'Kumbh Sans', sans-serif;
 }
 
+body {
+height: auto;
+margin: auto;
+}
+
 h1 {
   color: #1D1E36;
   transition: color 500ms ease-in-out;
